@@ -1,0 +1,40 @@
+.grid-list-display {
+    flexGrow: 1,
+}
+
+.circular-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40vh;
+
+    .MuiCircularProgress-root {
+        margin-left: 2rem;
+    }
+}
+
+.search-area {
+    display: flex;
+    padding: 2rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.search-input-area {
+    margin-left: 1rem;
+
+    .search-input{
+        margin: 1rem 1rem 1rem 0;
+        width: 15rem;
+    }
+}
+
+.search-selector-area {
+    .search-selector {
+        width: 15rem;
+
+        .MuiSelect-select.MuiSelect-select {
+            margin-top: 1rem;
+        }
+    }
+}
+
