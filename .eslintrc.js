@@ -11,7 +11,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'no-console': ['warn'],
+    'no-console': 'off',
     'no-explicit-any': 'off',
     'prettier/prettier': [
       'error',

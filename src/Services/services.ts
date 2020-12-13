@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 
-import { IBrewery } from '../Utils/interfaces';
+import { IBrewery } from '../Types/brewery';
 
 export async function fetchAPI(request: string): Promise<IBrewery[]> {
-  const response = await axios
+  return axios
     .get(request)
     .then((data) => {
       console.info('axios call :', data.data);
@@ -12,6 +12,4 @@ export async function fetchAPI(request: string): Promise<IBrewery[]> {
       return data.data;
     })
     .catch((error) => console.error('axios error :', error));
-
-  return response;
 }

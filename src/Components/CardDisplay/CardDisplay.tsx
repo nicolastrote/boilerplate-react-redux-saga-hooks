@@ -4,9 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import React, { FC } from 'react';
 import isEmpty from 'lodash/isEmpty';
 
-import { IBrewery } from '../../Utils/interfaces';
-
 import './CardDisplay.scss';
+import { IBrewery } from '../../Types/brewery';
 
 interface IProps extends React.HTMLAttributes<HTMLElement> {
   brewery: IBrewery;
@@ -23,9 +22,7 @@ const CardDisplay: FC<IProps> = (props) => {
   return (
     <Card
       className="card"
-      onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
-        onClickCard(e, brewery.website_url)
-      }
+      onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => onClickCard(e, brewery.website_url)}
     >
       <CardContent>
         <Typography className="over-line" color="textSecondary" gutterBottom>

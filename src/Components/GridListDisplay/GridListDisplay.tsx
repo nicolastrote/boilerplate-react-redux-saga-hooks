@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
@@ -9,8 +10,8 @@ import { Alert } from '@material-ui/lab';
 import isEmpty from 'lodash/isEmpty';
 import { MenuItem } from '@material-ui/core';
 
+import { IBrewery } from '../../Types/brewery';
 import { fetchAPI } from '../../Services/services';
-import { IBrewery } from '../../Utils/interfaces';
 import { API_URL, LOCATIONS, ONLY_ALPHANUMERIC_REGEX } from '../../Utils/constants';
 import CardDisplay from '../CardDisplay/CardDisplay';
 
@@ -22,8 +23,11 @@ const GridListDisplay: FC = () => {
   const [searchSelector, setSearchSelector] = useState<string | undefined>('');
   const [breweryListFiltered, setBreweryListFiltered] = useState<IBrewery[] | null>(null);
 
+  const myFirstTestHookRedux = useSelector((state) => state.root.breweryList);
+
   useEffect(() => {
     fetchAPI(API_URL).then((response: IBrewery[]) => setBreweryList(response));
+    console.log('myFirstTestHookRedux', myFirstTestHookRedux);
   }, []);
 
   useEffect(() => {

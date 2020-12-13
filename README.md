@@ -9,14 +9,16 @@ A web app to exercise on react, typescript, eslint, prettier and more
 - [Sources](#sources)
 - [Prior](#prior)
 - [Github](#github)
+- [Redux Hooks](#redux%20hooks)
 
 ## Sources
 
-- REST API:
+- REST API
   - openbrewerydb.org: [https://www.openbrewerydb.org] Opensource
-- React:
+- React
   - Material UI: [https://material-ui.com]
   - Axios: [https://github.com/axios/axios]
+  - Redux hooks: [https://react-redux.js.org/api/hooks]
 
 ## Prior
 
@@ -36,3 +38,12 @@ A web app to exercise on react, typescript, eslint, prettier and more
 - `yarn init`
 - `git clone https://github.com/nicolastrote/brewery-react-app.git && cd brewery-react-app`
 - `yarn && yarn start`
+
+## Redux Hooks
+
+- redux-hook connect/dispatch/mapState...: [https://react-redux.js.org/using-react-redux/static-typing]
+- redux-hook: [https://medium.com/javascript-in-plain-english/add-redux-to-your-react-app-with-react-hooks-5abb0bff9d7e]
+  - 'yarn add redux react-redux'
+- redux-devtools with hooks:[https://github.com/zalmoxisus/redux-devtools-extension#usage]
+  - 'yarn add redux-devtools-extension'
+
