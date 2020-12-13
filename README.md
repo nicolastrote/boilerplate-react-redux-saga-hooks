@@ -2,7 +2,7 @@
 
 A web app to exercise on react, typescript, eslint, prettier and more
 
-<img src="./public/brewery-react-app.svg" width="50%" alt="svg beer picture">
+<img src="./public/brewery-react-app.svg" width="25%" alt="svg beer picture">
 
 ## Table of contents
 
