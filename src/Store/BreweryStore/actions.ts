@@ -1,9 +1,9 @@
+import { IBrewery } from '../../Types/brewery';
+
 import { GetBreweryListAction, GET_BREWERY_LIST } from './action-types';
 
-export const getBreweryList = (): GetBreweryListAction => {
-  console.log('// // ACTIONS');
+function action(type: string, payload: IBrewery[]): GetBreweryListAction {
+  return { type, payload };
+}
 
-  return {
-    type: GET_BREWERY_LIST,
-  };
-};
+export const getBreweryList = (): GetBreweryListAction => action(GET_BREWERY_LIST, []);

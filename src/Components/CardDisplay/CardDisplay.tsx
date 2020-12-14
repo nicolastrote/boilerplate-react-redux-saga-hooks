@@ -11,7 +11,7 @@ interface IProps extends React.HTMLAttributes<HTMLElement> {
   brewery: IBrewery;
 }
 
-const CardDisplay: FC<IProps> = (props) => {
+const CardDisplay: FC<IProps> = (props: IProps) => {
   const { brewery } = props;
 
   const onClickCard = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, absoluteUrl: string) => {

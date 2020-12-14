@@ -1,5 +1,4 @@
 import React, { FC, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
@@ -11,24 +10,20 @@ import isEmpty from 'lodash/isEmpty';
 import { MenuItem } from '@material-ui/core';
 
 import { IBrewery } from '../../Types/brewery';
-import { fetchAPI } from '../../Services/services';
-import { API_URL, LOCATIONS, ONLY_ALPHANUMERIC_REGEX } from '../../Utils/constants';
+import { LOCATIONS, ONLY_ALPHANUMERIC_REGEX } from '../../Utils/constants';
 import CardDisplay from '../CardDisplay/CardDisplay';
 
 import './GridListDisplay.scss';
 
-const GridListDisplay: FC = () => {
-  const [breweryList, setBreweryList] = useState<IBrewery[] | null>(null);
+interface IProps extends React.HTMLAttributes<HTMLElement> {
+  breweryList: IBrewery[];
+}
+
+const GridListDisplay: FC<IProps> = (props: IProps) => {
+  const { breweryList } = props;
   const [searchInput, setSearchInput] = useState<string>('');
   const [searchSelector, setSearchSelector] = useState<string | undefined>('');
   const [breweryListFiltered, setBreweryListFiltered] = useState<IBrewery[] | null>(null);
-
-  const myFirstTestHookRedux = useSelector((state) => state.root.breweryList);
-
-  useEffect(() => {
-    fetchAPI(API_URL).then((response: IBrewery[]) => setBreweryList(response));
-    console.log('myFirstTestHookRedux', myFirstTestHookRedux);
-  }, []);
 
   useEffect(() => {
     setBreweryListFiltered(breweryList);

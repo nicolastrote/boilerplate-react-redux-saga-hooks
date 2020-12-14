@@ -52,5 +52,7 @@ A web app to exercise on react, typescript, eslint, prettier and more
   
 ## SAGA
 
-  - 'yarn add redux-saga @types/redux-saga'
-
+- 'yarn add redux-saga @types/redux-saga redux-logger'
+- 'yarn add redux-logger -D'
+  - Redux-logger: tool to inspect in console panel triggered actions and state of Redux 
+  - We only need it for development that why we add it as a dev-dependency

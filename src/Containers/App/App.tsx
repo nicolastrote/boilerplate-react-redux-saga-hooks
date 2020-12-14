@@ -3,23 +3,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 
 import GridListDisplay from '../../Components/GridListDisplay/GridListDisplay';
+import { getBreweryList } from '../../Store/BreweryStore/actions';
+
 import './App.scss';
 
 const App = (): JSX.Element => {
+  const dispatch = useDispatch();
   const breweryList = useSelector((state) => state.root.breweryList);
   console.log('useSelector breweryList', breweryList);
 
-  const dispatch = useDispatch();
-
-  // TODO : move this to action file
-  const getBreweryList = () => {
-    dispatch({
-      type: 'GET_BREWERY_LIST',
-    });
-  };
-
   useEffect(() => {
-    getBreweryList();
+    dispatch(getBreweryList());
   }, []);
 
   return (
@@ -28,7 +22,7 @@ const App = (): JSX.Element => {
         <Typography variant="h1" gutterBottom>
           Brewery REACT/TypeScript demo
         </Typography>
-        <GridListDisplay />
+        <GridListDisplay breweryList={breweryList} />
       </section>
     </div>
   );

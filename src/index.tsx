@@ -1,19 +1,26 @@
 import React from 'react';
+import createSagaMiddleware from 'redux-saga';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, Store } from 'redux';
 import { Provider } from 'react-redux';
+import { logger } from 'redux-logger';
 
 import App from './Containers/App/App';
-import { Reducer } from './Store';
+import rootSaga from './Store/BreweryStore/saga';
+import { reducer, RootState } from './Store';
 import * as serviceWorker from './serviceWorker';
+import { GetBreweryListAction } from './Store/BreweryStore/action-types';
 
 import './index.scss';
 
-const store = createStore(
-  Reducer /* preloadedState, */,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__(),
+const sagaMiddleware = createSagaMiddleware();
+
+const store: Store<RootState, GetBreweryListAction> & { dispatch: unknown } = createStore(
+  reducer,
+  applyMiddleware(sagaMiddleware, logger),
 );
+
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
   <Provider store={store}>

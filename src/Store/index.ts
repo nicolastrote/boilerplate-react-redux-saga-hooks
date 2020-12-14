@@ -2,8 +2,8 @@ import { combineReducers } from 'redux';
 
 import BreweryListReducer from './BreweryStore/reducer';
 
-export const Reducer = combineReducers({
+export const reducer = combineReducers({
   root: BreweryListReducer,
 });
 
-export type RootState = ReturnType<typeof Reducer>;
+export type RootState = ReturnType<typeof reducer>;

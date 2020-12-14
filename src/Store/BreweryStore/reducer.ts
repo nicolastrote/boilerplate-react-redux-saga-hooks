@@ -1,21 +1,26 @@
-import { IBrewery } from '../../Types/brewery';
-
 import { BreweryState } from './types';
-import { GetBreweryListAction, GET_BREWERY_LIST } from './action-types';
+import { GetBreweryListAction, GET_BREWERY_LIST, GET_BREWERY_LIST_RECEIVED } from './action-types';
 
 const initState: BreweryState = {
+  loading: false,
   breweryList: [],
 };
 
-const BreweryListReducer = (state: BreweryState = initState, action: GetBreweryListAction): BreweryState => {
+const BreweryListReducer = (
+  state: BreweryState = initState,
+  action: GetBreweryListAction,
+): BreweryState => {
   switch (action.type) {
     case GET_BREWERY_LIST: {
-      // TODO replace breweryListFetched by the fetch value done by saga middleware call
-      const breweryListFetched: IBrewery[] = [];
+      console.log('// // GET_BREWERY_LIST');
 
-      return {
-        breweryList: breweryListFetched,
-      };
+      return { ...state, loading: true };
+    }
+
+    case GET_BREWERY_LIST_RECEIVED: {
+      console.log('// // GET_BREWERY_LIST_RECEIVED', action.payload);
+
+      return { ...state, breweryList: action.payload, loading: false };
     }
 
     default:
