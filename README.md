@@ -19,6 +19,9 @@ A web app to exercise on react, typescript, eslint, prettier and more
   - Material UI: [https://material-ui.com]
   - Axios: [https://github.com/axios/axios]
   - Redux hooks: [https://react-redux.js.org/api/hooks]
+- Saga
+  - saga basics: [https://www.codementor.io/@rajjeet/step-by-step-how-to-add-redux-saga-to-a-react-redux-app-11xqieyj67]
+  - saga typescript: [https://tech.lalilo.com/redux-saga-and-typescript-doing-it-right]
 
 ## Prior
 
@@ -46,4 +49,8 @@ A web app to exercise on react, typescript, eslint, prettier and more
   - 'yarn add redux react-redux'
 - redux-devtools with hooks:[https://github.com/zalmoxisus/redux-devtools-extension#usage]
   - 'yarn add redux-devtools-extension'
+  
+## SAGA
+
+  - 'yarn add redux-saga @types/redux-saga'
 

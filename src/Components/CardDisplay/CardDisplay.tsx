@@ -22,7 +22,9 @@ const CardDisplay: FC<IProps> = (props) => {
   return (
     <Card
       className="card"
-      onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => onClickCard(e, brewery.website_url)}
+      onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
+        onClickCard(e, brewery.website_url)
+      }
     >
       <CardContent>
         <Typography className="over-line" color="textSecondary" gutterBottom>

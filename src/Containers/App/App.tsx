@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import GridListDisplay from '../../Components/GridListDisplay/GridListDisplay';
 import './App.scss';
 
-// eslint-disable-next-line no-undef
 const App = (): JSX.Element => {
   const breweryList = useSelector((state) => state.root.breweryList);
   console.log('useSelector breweryList', breweryList);
