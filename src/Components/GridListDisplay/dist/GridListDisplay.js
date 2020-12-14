@@ -12,7 +12,7 @@ var isEmpty_1 = require("lodash/isEmpty");
 var core_1 = require("@material-ui/core");
 var services_1 = require("../../Services/services");
 var constants_1 = require("../../Utils/constants");
-var CardDisplay_1 = require("../CardDisplay/CardDisplay");
+var CardDisplay_1 = require("../Spinner/Spinner");
 require("./GridListDisplay.scss");
 var GridListDisplay = function () {
     var _a = react_1.useState(null), breweryList = _a[0], setBreweryList = _a[1];

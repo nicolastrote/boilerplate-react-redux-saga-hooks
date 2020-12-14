@@ -4,12 +4,14 @@ import Typography from '@material-ui/core/Typography';
 
 import GridListDisplay from '../../Components/GridListDisplay/GridListDisplay';
 import { getBreweryList } from '../../Store/BreweryStore/actions';
+import Spinner from '../../Components/Spinner/Spinner';
 
 import './App.scss';
 
 const App = (): JSX.Element => {
   const dispatch = useDispatch();
   const breweryList = useSelector((state) => state.root.breweryList);
+  const breweryListLoading = useSelector((state) => state.root.loading);
   console.log('useSelector breweryList', breweryList);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const App = (): JSX.Element => {
         <Typography variant="h1" gutterBottom>
           Brewery REACT/TypeScript demo
         </Typography>
-        <GridListDisplay breweryList={breweryList} />
+        {breweryListLoading ? <Spinner /> : <GridListDisplay breweryList={breweryList} />}
       </section>
     </div>
   );

@@ -5,7 +5,7 @@ var CardContent_1 = require("@material-ui/core/CardContent");
 var Typography_1 = require("@material-ui/core/Typography");
 var react_1 = require("react");
 var isEmpty_1 = require("lodash/isEmpty");
-require("./CardDisplay.scss");
+require("./Spinner.scss");
 var CardDisplay = function (props) {
     var brewery = props.brewery;
     var onClickCard = function (e, absoluteUrl) {
