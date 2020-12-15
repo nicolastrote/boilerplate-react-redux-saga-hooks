@@ -7,9 +7,10 @@ import { logger } from 'redux-logger';
 
 import App from './Containers/App/App';
 import rootSaga from './Store/BreweryStore/saga';
-import { reducer, RootState } from './Store';
+import { reducer } from './Store';
 import * as serviceWorker from './serviceWorker';
 import { GetBreweryListAction } from './Store/BreweryStore/action-types';
+import { RootState } from './Store/types';
 
 import './index.scss';
 

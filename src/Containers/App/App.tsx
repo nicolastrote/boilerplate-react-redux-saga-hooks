@@ -1,32 +1,31 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Typography from '@material-ui/core/Typography';
+import { Divider } from '@material-ui/core';
 
-import GridListDisplay from '../../Components/GridListDisplay/GridListDisplay';
 import { getBreweryList } from '../../Store/BreweryStore/actions';
+import GridListDisplay from '../../Components/GridListDisplay/GridListDisplay';
 import Spinner from '../../Components/Spinner/Spinner';
+import DashbordTitle from '../../Components/DashbordTitle/dashbordTitle';
+import { RootState } from '../../Store/types';
 
 import './App.scss';
 
+// eslint-disable-next-line no-undef
 const App = (): JSX.Element => {
   const dispatch = useDispatch();
-  const breweryList = useSelector((state) => state.root.breweryList);
-  const breweryListLoading = useSelector((state) => state.root.loading);
-  console.log('useSelector breweryList', breweryList);
+  const breweryList = useSelector((state: RootState) => state.root.breweryList);
+  const breweryListLoading = useSelector((state: RootState) => state.root.loading);
 
   useEffect(() => {
     dispatch(getBreweryList());
   }, []);
 
   return (
-    <div className="App">
-      <section>
-        <Typography variant="h1" gutterBottom>
-          Brewery REACT/TypeScript demo
-        </Typography>
-        {breweryListLoading ? <Spinner /> : <GridListDisplay breweryList={breweryList} />}
-      </section>
-    </div>
+    <section>
+      <DashbordTitle />
+      <Divider />
+      {breweryListLoading ? <Spinner /> : <GridListDisplay breweryList={breweryList} />}
+    </section>
   );
 };
 

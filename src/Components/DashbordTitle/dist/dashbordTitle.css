@@ -1,0 +1,15 @@
+.dashbord-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem 1rem 1rem;
+}
+.dashbord-title .MuiTypography-h1 {
+  margin: 3rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.dashbord-title .MuiTypography-subtitle1 {
+  color: #797781;
+}

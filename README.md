@@ -1,6 +1,6 @@
 # Brewery React App
 
-A web app to exercise on react, typescript, eslint, prettier and more
+A web app to exercise on react, typescript, eslint, prettier, redux, hooks, saga ...
 
 <img src="./public/brewery-react-app.svg" width="25%" alt="svg beer picture">
 
