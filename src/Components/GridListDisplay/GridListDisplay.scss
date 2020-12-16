@@ -2,13 +2,13 @@
     flexGrow: 1,
 }
 
-.circular-progress {
+.progress-massage {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 40vh;
 
-    .MuiCircularProgress-root {
+    .circular-progress {
         margin-left: 2rem;
     }
 }
@@ -31,10 +31,7 @@
 .search-selector-area {
     .search-selector {
         width: 15rem;
-
-        .MuiSelect-select.MuiSelect-select {
-            margin-top: 1rem;
-        }
+        padding-top: 1rem;
     }
 }
 

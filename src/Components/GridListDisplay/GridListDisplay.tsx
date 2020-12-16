@@ -51,9 +51,9 @@ const GridListDisplay: FC<IProps> = (props: IProps) => {
 
   if (breweryListFiltered === null) {
     return (
-      <div className="circular-progress">
+      <div className="progress-massage">
         <div>Application is fetching breweries from openbrewerydb.org</div>
-        <CircularProgress />
+        <CircularProgress className="circular-progress" />
       </div>
     );
   }

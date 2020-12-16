@@ -5,9 +5,9 @@ import HomeIcon from '../HomeIcon/homeIcon';
 
 import './dashbordTitle.scss';
 
-const DashbordTitle: FC = () => {
+const DashboardTitle: FC = () => {
   return (
-    <div className="dashbord-title">
+    <div className="dashboard-title">
       <Typography variant="h1" gutterBottom>
         Brewery React Demo <HomeIcon />
       </Typography>
@@ -18,4 +18,4 @@ const DashbordTitle: FC = () => {
   );
 };
 
-export default DashbordTitle;
+export default DashboardTitle;

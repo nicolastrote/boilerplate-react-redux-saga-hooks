@@ -5,7 +5,7 @@ import { Divider } from '@material-ui/core';
 import { getBreweryList } from '../../Store/BreweryStore/actions';
 import GridListDisplay from '../../Components/GridListDisplay/GridListDisplay';
 import Spinner from '../../Components/Spinner/Spinner';
-import DashbordTitle from '../../Components/DashbordTitle/dashbordTitle';
+import DashboardTitle from '../../Components/DashbordTitle/dashbordTitle';
 import { RootState } from '../../Store/types';
 
 import './App.scss';
@@ -22,7 +22,7 @@ const App = (): JSX.Element => {
 
   return (
     <section>
-      <DashbordTitle />
+      <DashboardTitle />
       <Divider />
       {breweryListLoading ? <Spinner /> : <GridListDisplay breweryList={breweryList} />}
     </section>

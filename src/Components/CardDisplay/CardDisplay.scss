@@ -3,12 +3,12 @@
   color: white;
 
   &:hover {
-    box-shadow: 0px 2px 1px -1px #01146E, 0px 1px 1px 0px #01146E, 0px 1px 3px 0px #01146E;
+    box-shadow: 0 2px 1px -1px #01146E, 0 1px 1px 0 #01146E, 0 1px 3px 0 #01146E;
   }
 
   .cardAction{
     display: block;
-    textAlign: initial;
+    text-align: initial;
   }
 
   .over-line {
