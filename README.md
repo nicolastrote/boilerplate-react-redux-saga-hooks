@@ -1,15 +1,18 @@
 # Brewery React App
 
-A web app to exercise on react, typescript, eslint, prettier, redux, hooks, saga ...
+<img src="./public/brewery-react-app.svg" width="25%" alt="svg beer picture"> A web app to exercise on react, typescript, eslint, prettier, redux, hooks, saga ...
 
-<img src="./public/brewery-react-app.svg" width="25%" alt="svg beer picture">
+![alt text](external-ressources/capture.jpg)
 
 ## Table of contents
 
-- [Sources](#sources)
-- [Prior](#prior)
-- [Github](#github)
-- [Redux Hooks](#redux%20hooks)
+- [Brewery React App](#brewery-react-app)
+  - [Table of contents](#table-of-contents)
+  - [Sources](#sources)
+  - [Prior](#prior)
+  - [Github](#github)
+  - [Redux Hooks](#redux-hooks)
+  - [SAGA](#saga)
 
 ## Sources
 
