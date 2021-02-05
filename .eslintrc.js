@@ -1,14 +1,24 @@
 module.exports = {
   env: {
-    browser: true,
-    jest: true,
-    es6: true,
+    'es6': true,
+    'node': true
   },
-  plugins: ['import'],
-  extends: 'airbnb-typescript-prettier',
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
+  'plugins': [
+    'react',
+    '@typescript-eslint'
+  ],
+  extends: [
+    'airbnb-typescript-prettier',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended'
+  ],
+  'parserOptions': {
+    'ecmaFeatures': {
+      'jsx': true
+    },
+    'ecmaVersion': 11,
+    'sourceType': 'module'
   },
   rules: {
     'no-console': 'off',
@@ -85,7 +95,6 @@ module.exports = {
     'no-nested-ternary': ['warn'],
     camelcase: ['warn'],
     'import/no-extraneous-dependencies': ['off'],
-    'no-undef': ['warn'],
     'import/no-dynamic-require': ['off'],
     'no-new-require': ['warn'],
     'operator-assignment': ['warn'],

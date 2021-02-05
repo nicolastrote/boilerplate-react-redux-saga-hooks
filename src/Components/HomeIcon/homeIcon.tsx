@@ -1,10 +1,9 @@
-/* eslint-disable max-len */
-import React from 'react';
+import React, { FC } from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 import { ReactComponent as Logo } from './brewery-react-app.svg';
 
-const HomeIcon: React.FC = () => (
+const HomeIcon: FC = () => (
   <SvgIcon>
     <Logo />
   </SvgIcon>

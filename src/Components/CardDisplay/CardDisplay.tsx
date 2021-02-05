@@ -4,8 +4,9 @@ import Typography from '@material-ui/core/Typography';
 import React, { FC } from 'react';
 import isEmpty from 'lodash/isEmpty';
 
-import './CardDisplay.scss';
 import { IBrewery } from '../../Types/brewery';
+
+import './CardDisplay.scss';
 
 interface IProps extends React.HTMLAttributes<HTMLElement> {
   brewery: IBrewery;

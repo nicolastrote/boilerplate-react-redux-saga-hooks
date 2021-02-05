@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-// eslint-disable-next-line prettier/prettier
+/* eslint-disable */
 export const API_URL = 'https://api.openbrewerydb.org/breweries';
 export const ONLY_ALPHANUMERIC_REGEX = /([^A-Za-z0-9@& /]+)/g;
 

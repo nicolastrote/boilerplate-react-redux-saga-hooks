@@ -7,6 +7,8 @@ import { GET_BREWERY_LIST_RECEIVED } from './action-types';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function* fetchBreweryListWorker() {
-  const fetchedBreweryList: IBrewery[] = yield fetch(API_URL).then((response) => response.json());
+  const fetchedBreweryList: IBrewery[] = yield fetch(API_URL)
+    .then((response) => response.json())
+    .catch((error) => console.debug('Error fetching data : ', error));
   yield put({ type: GET_BREWERY_LIST_RECEIVED, payload: fetchedBreweryList });
 }

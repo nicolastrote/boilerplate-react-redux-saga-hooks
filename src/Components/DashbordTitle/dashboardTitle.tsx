@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 
 import HomeIcon from '../HomeIcon/homeIcon';
 
-import './dashbordTitle.scss';
+import './dashboardTitle.scss';
 
 const DashboardTitle: FC = () => {
   return (

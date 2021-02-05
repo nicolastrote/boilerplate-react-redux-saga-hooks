@@ -1,5 +1,4 @@
 /* eslint-disable camelcase */
-// generated with http://json2ts.com/
 
 export interface IBrewery {
   id: number;

@@ -1,17 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Divider } from '@material-ui/core';
 
 import { getBreweryList } from '../../Store/BreweryStore/actions';
 import GridListDisplay from '../../Components/GridListDisplay/GridListDisplay';
 import Spinner from '../../Components/Spinner/Spinner';
-import DashboardTitle from '../../Components/DashbordTitle/dashbordTitle';
+import DashboardTitle from '../../Components/DashbordTitle/dashboardTitle';
 import { RootState } from '../../Store/types';
+import { IBrewery } from '../../Types/brewery';
 
-import './App.scss';
-
-// eslint-disable-next-line no-undef
-const App = (): JSX.Element => {
+const App: FC = () => {
   const dispatch = useDispatch();
   const breweryList = useSelector((state: RootState) => state.root.breweryList);
   const breweryListLoading = useSelector((state: RootState) => state.root.loading);
@@ -20,12 +18,15 @@ const App = (): JSX.Element => {
     dispatch(getBreweryList());
   }, []);
 
+  const breweryListRender = (display: boolean, list: IBrewery[]): JSX.Element =>
+    display ? <Spinner /> : <GridListDisplay breweryList={list} />;
+
   return (
-    <section>
+    <div>
       <DashboardTitle />
       <Divider />
-      {breweryListLoading ? <Spinner /> : <GridListDisplay breweryList={breweryList} />}
-    </section>
+      {breweryListRender(breweryListLoading, breweryList)}
+    </div>
   );
 };
 
