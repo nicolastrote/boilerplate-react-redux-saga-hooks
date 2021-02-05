@@ -2,7 +2,7 @@
 
 <img src="./public/brewery-react-app.svg" width="25%" alt="svg beer picture"> A web app to exercise on react, typescript, eslint, prettier, redux, hooks, saga ...
 
-![alt text](external-ressources/capture.jpg)
+![alt text](public/capture.jpg)
 
 ## Table of contents
 
